@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int reverse(int num, int rev, int a)
+{
+    rev=0;
+    while(num!=0)
+    {
+    a=num%10;
+    rev= rev*10 + a;
+    num/=10;
+    }
+    return rev;
+}
+
+
+void main()
+
+{
+    int num,a, r,ori,d,rev;
+    printf("\n enter the number");
+    scanf("%d",&num);
+   
+    ori= num;
+    r= reverse(num, rev, a);
+    if(ori == r)
+    
+        printf("it is a palindrome");
+    
+    else
+    
+        printf("it is not a palindrome");
+    
+    
+}
+
+
+
+
+
+
