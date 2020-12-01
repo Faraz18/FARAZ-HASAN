@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <math.h>
+
+int reverse(int num)
+{
+   int digit = (int)log10(num);
+
+   if(num == 0)
+   return 0;
+   
+   return ((num%10 * pow(10, digit)) + reverse(num/10));
+}
+
+int check(int num)
+{
+    if(num == reverse(num))
+    {
+        return 1;
+    }
+    else
+    
+    return 0;
+}
+
+
+void main()
+
+{
+    int num;
+    printf("\n enter the number:");
+    scanf("%d",&num);
+    
+    if(check(num) == 1)
+    {
+        printf("it is palindrome number");
+    }
+    else
+    {
+        printf("it is NOT palindrome number");
+    }
+}
