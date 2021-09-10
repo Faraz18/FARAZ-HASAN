@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,i,p, arr[30];
+    
+    printf("\n enter the number of elements in an array:");
+    scanf("%d", &n);
+    
+    printf("\n enter the array:");
+    
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    
+    printf("\n enter the index no of no to be deleted:");
+    scanf("%d", &p);
+    
+    for(i=p; i<n; i++)
+    {
+        arr[i]= arr[i+1];
+        n--;
+    }
+    
+    printf("\n new array:");
+    
+    for(i=0; i<n; i++)
+    {
+        printf("%d \n", arr[i]);
+    }
+    return 0;
+}
