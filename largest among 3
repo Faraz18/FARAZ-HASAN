@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int a1 , a2, a3;
+    
+    printf("enter the values of a1, a2, a3 \n");
+    scanf("%d %d %d", &a1, &a2, &a3);
+    
+    if (a1 > a2)
+    {
+        if (a1 > a3)
+        {
+            printf("a1 is the largest \n");
+        }
+        else
+        {
+            printf("a3 is the largest \n");
+        }
+    }
+    else if (a2 > a3)
+        printf("a2 is the largest \n");
+    else
+        printf("a3 is the largest \n");
+    
+    return 0;
+}
