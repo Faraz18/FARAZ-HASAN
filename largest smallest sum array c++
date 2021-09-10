@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+ 
+int main ()
+{
+    int arr[50];
+    int n,i,j,max,min;
+    cout<<"\n enter the number of elements:";
+    cin>>n;
+    
+    cout<<"\n enter the elements:";
+    
+    for(i=0;i<n; i++)
+    {
+        cin>> arr[i];
+    }
+
+    max= arr[0];
+    min= arr[0];
+    
+    for(i=0; i<n; i++)
+    {
+        if(arr[i]> max)
+        {
+            max=arr[i];
+        }
+    }
+    cout<<"maximum value:"<<max<<endl;
+    
+     for(i=0; i<n; i++)
+    {
+        if(arr[i]< min)
+        {
+            min=arr[i];
+        }
+    }
+    
+    cout<<"minimum value:"<<min<<endl;
+    
+    cout<<"sum is:"<<max + min<<endl;
+    cout<<"diff is:"<<max - min<<endl;
+    
+    for(i=0;i<n; i++)
+    {
+        if(max==arr[i])
+        {
+            cout<<"position of max is:"<<i+1<<endl;
+        }
+        if(min==arr[i])
+        {
+            cout<<"position of min is:"<<i+1<<endl;
+        }
+    }
+    
+    return 0;
+}
+    
