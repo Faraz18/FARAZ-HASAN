@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class shape
+{
+ public:
+ int l,b,r;
+ float a;
+ shape(){ }
+ shape(float l,float b)
+ {
+     a=2*(l+b);
+     cout<<"\n"<<"parameter of rectangle:"<<a;
+ }
+ shape(float r)
+ {
+     a=2*3.14*r;
+     cout<<"\n"<<"perimeter of circle:"<<a;
+ }
+ ~shape()
+ {
+     cout<<endl;
+     cout<<"destructor invoked"<<endl;
+ }
+};
+
+
+int main()
+{   int i,j,m;
+    shape x,y;
+    cout<<"perimeter of rectangle:"<<endl;
+    cout<<"enter length and breadth:"<<endl;
+    cin>>i>>j;
+    x=shape(i,j);
+    cout<<"perimeter of circle:"<<endl;
+    cout<<"enter radius: "<<endl;
+    cin>>m;
+    y=shape(m);
+
+    return 0;
+}
