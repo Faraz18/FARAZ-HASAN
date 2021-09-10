@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+ 
+struct student
+{
+    char name[50];
+    int rno;
+    int age;
+    
+}s;
+
+int main()
+{
+    cout<<"enter name:";
+    cin.get(s.name, 50);
+    cout<<"enter roll no:";
+    cin>>s.rno;
+    cout<<"enter age:";
+    cin>>s.age;
+
+    cout<<"INFORMATION:"<<endl;
+    
+    cout<<"Name is:"<<s.name<<endl;
+    cout<<"Age is:"<<s.age<<endl;
+    cout<<"Roll no:"<<s.rno;
+    
+    return 0;
+}
+
